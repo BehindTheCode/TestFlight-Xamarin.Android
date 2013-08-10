@@ -1,0 +1,29 @@
+<metadata>
+  <!-- Omit all packages except the one containing the TestFlight class. -->
+  <remove-node path="/api/package[@name!='com.testflightapp.lib']" />
+
+  <!-- Give the package a Pascal cased name. This will be the .NET namespace. -->
+  <attr path="/api/package[@name='com.testflightapp.lib']" name="managedName">Com.TestFlightApp.Lib</attr>
+
+  <!-- Rename the parameter for endSession method. -->
+  <attr path="/api/package[@name='com.testflightapp.lib']/class[@name='TestFlight']/method[@name='endSession']/parameter[@name='p0']" name="name">currentTimeMillis</attr>
+
+  <!-- Rename the parameter for log method. -->
+  <attr path="/api/package[@name='com.testflightapp.lib']/class[@name='TestFlight']/method[@name='log']/parameter[@name='p0']" name="name">logLine</attr>
+
+  <!-- Rename the parameter for passCheckpoint method. -->
+  <attr path="/api/package[@name='com.testflightapp.lib']/class[@name='TestFlight']/method[@name='passCheckpoint']/parameter[@name='p0']" name="name">checkpointName</attr>
+
+  <!-- Rename the parameters for sendCrash method. -->
+  <attr path="/api/package[@name='com.testflightapp.lib']/class[@name='TestFlight']/method[@name='sendCrash']/parameter[@name='p0']" name="name">currentTimeMillis</attr>
+  <attr path="/api/package[@name='com.testflightapp.lib']/class[@name='TestFlight']/method[@name='sendCrash']/parameter[@name='p1']" name="name">stackTrace</attr>
+  <attr path="/api/package[@name='com.testflightapp.lib']/class[@name='TestFlight']/method[@name='sendCrash']/parameter[@name='p2']" name="name">threadName</attr>
+
+  <!-- Rename the parameter for setSessionTimeout method. -->
+  <attr path="/api/package[@name='com.testflightapp.lib']/class[@name='TestFlight']/method[@name='setSessionTimeout']/parameter[@name='p0']" name="name">timeoutSeconds</attr>
+
+  <!-- Rename the parameters for takeOff method. -->
+  <attr path="/api/package[@name='com.testflightapp.lib']/class[@name='TestFlight']/method[@name='takeOff']/parameter[@name='p0']" name="name">application</attr>
+  <attr path="/api/package[@name='com.testflightapp.lib']/class[@name='TestFlight']/method[@name='takeOff']/parameter[@name='p1']" name="name">appToken</attr>
+</metadata>
+
